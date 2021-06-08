@@ -40,8 +40,6 @@ export default class Conversion extends Component {
             converted = valor * dolar;
             document.getElementById('resultado').innerHTML = converted.toFixed(2);
         }
-
-        console.log('Valor: ', converted, valor);
     }
     
     render(){
@@ -69,7 +67,7 @@ export default class Conversion extends Component {
                     <br/>
                     <button class="" type="button" onClick={this.conversion}>Converter</button>
                     <br/>
-                    <span class="" id="resultado">resultado: </span>
+                    <span class="" id="resultado"></span>
 
                 </form>
             </div>
