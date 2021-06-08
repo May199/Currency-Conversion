@@ -1,3 +1,4 @@
+/* eslint-disable no-mixed-operators */
 /* eslint-disable eqeqeq */
 import './Conversion.css';
 import React, { Component } from "react";
@@ -52,7 +53,9 @@ export default class Conversion extends Component {
             converted = valor * euro;
             document.getElementById('resultado').innerHTML = converted.toFixed(2) + ' Real brasileiro';
         }
-
+        if(this.state.moedaOf == 'euro' && this.state.moedaTo == 'dolar' || this.state.moedaOf == 'dolar' && this.state.moedaTo == 'euro'){
+            alert('Funcionalidade ainda não implementada');
+        }
     }
     
     render(){
