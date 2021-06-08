@@ -53,15 +53,6 @@ export default class Conversion extends Component {
             document.getElementById('resultado').innerHTML = converted.toFixed(2) + ' Real brasileiro';
         }
 
-        // Conversão de dolar para euro e euro para dolar
-        if(this.state.moedaOf == 'dolar' && this.state.moedaTo == 'euro'){
-            converted = valor / euro;
-            document.getElementById('resultado').innerHTML = converted.toFixed(2) + ' Euro';
-        }
-        if(this.state.moedaOf == 'euro' && this.state.moedaTo == 'dolar'){
-            converted = valor * euro;
-            document.getElementById('resultado').innerHTML = converted.toFixed(2) + ' Dólar americano';
-        }
     }
     
     render(){
