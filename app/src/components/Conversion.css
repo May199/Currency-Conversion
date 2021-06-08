@@ -1,0 +1,24 @@
+.Input{
+    border-radius: 10px;
+    height: 18px;
+    border-color: transparent;
+}
+.of{
+    border-radius: 10px;
+    height: 20px;
+    border-color: transparent;
+}
+.to{
+    border-radius: 10px;
+    height: 20px;
+    border-color: transparent;
+}
+.btn{
+    border-radius: 12px;
+    height: 30px;
+    border-color: transparent;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+}

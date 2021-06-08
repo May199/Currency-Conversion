@@ -34,11 +34,11 @@ export default class Conversion extends Component {
     
         if(this.state.moedaOf == 'real' && this.state.moedaTo == 'dolar'){
             converted = valor / dolar;
-            document.getElementById('resultado').innerHTML = converted.toFixed(2);
+            document.getElementById('resultado').innerHTML = converted.toFixed(2) + ' Dólar americano';
         }
         if(this.state.moedaOf == 'dolar' && this.state.moedaTo == 'real'){
             converted = valor * dolar;
-            document.getElementById('resultado').innerHTML = converted.toFixed(2);
+            document.getElementById('resultado').innerHTML = converted.toFixed(2) + ' Real brasileiro';
         }
     }
     
@@ -46,11 +46,11 @@ export default class Conversion extends Component {
         return (
             <div className="">
                 
-                <form action="" class="">
-                    <input onChange={(e) => this.onValueChange(e)} type="number" className=""/>
+                <form>
+                    <input onChange={(e) => this.onValueChange(e)} type="number" className="Input"/>
                     <br/>
-            
-                    <select onChange={(e) => this.onValueOfmoeda(e)}>
+             
+                    <select onChange={(e) => this.onValueOfmoeda(e)} className="of">
                         <option></option>
                         <option type="text" value="dolar">Dolar</option>
                         <option type="text" value="real">Real</option>
@@ -58,17 +58,16 @@ export default class Conversion extends Component {
                     
                     <label> to </label>
 
-                    <select onChange={(e) => this.onValueTomoeda(e)}>
+                    <select onChange={(e) => this.onValueTomoeda(e)} className="to">
                         <option></option>
                         <option type="text" value="dolar">Dolar</option>
                         <option type="text" value="real">Real</option>
                     </select>
 
                     <br/>
-                    <button class="" type="button" onClick={this.conversion}>Converter</button>
+                    <button className="btn" type="button" onClick={this.conversion}>Converter</button>
                     <br/>
-                    <span class="" id="resultado"></span>
-
+                    <span className="" id="resultado"></span>
                 </form>
             </div>
         );
